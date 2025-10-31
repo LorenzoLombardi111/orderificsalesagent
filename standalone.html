@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orderific AI Sales Training</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        header {
+            position: fixed;
+            top: 2rem;
+            left: 2rem;
+            color: white;
+            z-index: 100;
+            max-width: 500px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .subtitle {
+            font-size: 1rem;
+            opacity: 0.95;
+            line-height: 1.5;
+        }
+
+        .subtitle a {
+            color: white;
+            text-decoration: underline;
+            font-weight: 500;
+        }
+
+        .subtitle a:hover {
+            opacity: 0.8;
+        }
+
+        main {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.75rem;
+            }
+
+            main {
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Orderific AI Sales Training</h1>
+        <p class="subtitle">
+            Your performance evaluation will be available 10 minutes after your call ends.
+            <a href="https://drive.google.com/drive/folders/1KhYZcwNDbXKzd7Gus7_UulqrBYKZCIrE?usp=sharing"
+                target="_blank" rel="noopener noreferrer">Access your evaluation here</a>.
+        </p>
+        <p class="subtitle" style="margin-top: 0.75rem;">
+            Please refresh the page after each call to start a new training session.
+        </p>
+    </header>
+
+    <main>
+        <!-- Widget will appear here as floating button -->
+    </main>
+
+    <script src="https://unpkg.com/@elevenlabs/convai-widget-embed" async type="text/javascript"></script>
+    <script>
+        // Array of agent IDs
+        const agentIds = [
+            'agent_7301k8w08n65emjbnr6tqgsvny9j',
+            'agent_1901k8w09k1ff4rtdfzp7tgz1g38',
+            'agent_7401k61nwc0qfdtbvw70w0qdk3y3'
+        ];
+
+        // Pick a random agent
+        const randomAgent = agentIds[Math.floor(Math.random() * agentIds.length)];
+
+        // Create and inject the widget element
+        const widget = document.createElement('elevenlabs-convai');
+        widget.setAttribute('agent-id', randomAgent);
+        document.body.appendChild(widget);
+    </script>
+</body>
+
+</html>
