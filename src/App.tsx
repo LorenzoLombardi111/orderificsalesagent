@@ -64,10 +64,10 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gradient-to-br from-primary-50 via-white to-secondary-50">
       <Header />
-      
-      <main className="py-8">
+
+      <main className="py-8 px-4">
         {!user ? (
           <UserForm onSubmit={handleUserSubmit} />
         ) : (
